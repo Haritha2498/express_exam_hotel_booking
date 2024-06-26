@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <div class="w-12/12">
+        <br>
+    <a href="/add">
+        <button type="submit " class="p-4 h-16 border mr-10 bg-blue-300 hover:bg-blue-400 float-right" >ADD BOOKING </button>
+        
+    </a> 
+    <a href="/view">
+        <button type="submit " class="p-4 h-16 border mr-10 bg-blue-300 hover:bg-blue-400 float-right" >VIEW HOTEL BOOKING DETAILS </button>
+        
+    </a> 
+    
+    </div> 
+
+    <h1 class="text-5xl text-cyan-500 ml-10 mt-10">HOTEL BOOKING SYSTEM</h1>
+
+    <div class="mt-40 ml-40">
+        <input type="text" class="w-[40%] h-16 border pl-4 text-orange-800 " name="id" id="id" placeholder="ENTER ROOM NUMBER">
+        <button type="submit " class="w-40 h-16 border ml-4 bg-blue-300 hover:bg-blue-400 mt-4 " onclick="search()" > search for details </button>
+    </div >
+
+    <div class="mt-10 ml-40">
+        <input type="text" class="w-[40%] h-16 border pl-4 text-orange-800 " name="date" id="date" placeholder="ENTER DATE">
+        <button type="submit " class="w-48 h-16 border ml-4 bg-blue-300 hover:bg-blue-400 mt-4 " onclick="searchday()" > search details of a day </button>
+    </div >
+
+    <script>
+        function search(){
+            const id=document.getElementById("id").value;
+
+            const url=`/search/${id}`;
+            console.log(url);
+            window.location.href=url;
+        }
+
+        function searchday(){
+            const id=document.getElementById("date").value;
+
+            const url=`/searchday/${id}`;
+            console.log(url);
+            window.location.href=url;
+        }
+    </script>
+
+
+</body>
+</html>

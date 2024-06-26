@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <div class="w-12/12">
+        <br>
+    <a href="/">
+        <button type="submit " class="p-4 h-16 border mr-10 bg-blue-300 hover:bg-blue-400 float-right" >HOME </button>
+        
+    </a>
+
+    </div> 
+
+
+
+    <div class="w-6/12 h-80 bg-blue-300 mx-auto mt-40">
+        <h1 class="text-xl ml-4 mt-4">ENTER BOOKING DETAILS</h1>
+        <form method="POST" action="/add">
+
+            <input type="number" placeholder="Enter room number"  name="room" id="room" class="border-2 h-8 ml-8 p-4 mt-4 w-10/12">
+            <input type="text" placeholder="Enter Booking Person Name " name="name" id="name" class="border-2 h-8 ml-8 p-4 mt-4 w-10/12">
+            <input type="text" placeholder="Enter Check in Date" name="entry" id="entry" class="border-2 h-8 ml-8 p-4 mt-4 w-10/12">
+            <input type="text" placeholder="Enter Check out Date" name="exit" id="exit" class="border-2 h-8 ml-8 p-4 mt-4 w-10/12">
+
+            <button type="submit" class="border-2 h-8 ml-8  mt-4 w-10/12 bg-blue-100 pb-4">BOOK</button>
+        </form>
+    </div>
+</body>
+</html>
