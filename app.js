@@ -83,7 +83,7 @@ app.get('/view/data',async (req,res)=>{
     try{
     const data=await hoteldb.find();
     res.json(data)
-    // res.json(emplist)
+    
 }
 catch(error){
     console.log(error)
@@ -116,8 +116,6 @@ app.get('/update/:id',async(req,res)=>
 const details=await hoteldb.findOne({room:eid})
 console.log(details)
 
-    // console.log("updation id:")
-    // console.log(eid);
     res.sendFile(path.join(__dirname,'public','update.html'))
     
 })
@@ -132,8 +130,7 @@ app.post('/update/data/:id',async(req,res)=>
     reqroom=reqroom.toString();
     const options = { new: true };
     console.log("hello");
-    // let details = emplist.findIndex(emp => emp.id === parseInt(reqid));
-    // 
+    
     const updateddetails=await hoteldb.findOneAndUpdate({room:reqroom},update,options);
     
     res.redirect('/view')
